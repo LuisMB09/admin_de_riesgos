@@ -7520,7 +7520,6 @@ a.anchor-link {
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">yfinance</span> <span class="k">as</span> <span class="nn">yf</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
 </pre></div>
 </div>
 </div>
@@ -7568,11 +7567,11 @@ a.anchor-link {
 
     <span class="n">var_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
         <span class="s2">"Métrica"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"VaR"</span><span class="p">,</span> <span class="s2">"cVaR"</span><span class="p">],</span>
-        <span class="s2">"Porcentual"</span><span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">var_porcentual</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cvar_porcentual</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">)],</span>
+        <span class="s2">"Porcentual"</span><span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">var_porcentual</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cvar_porcentual</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">4</span><span class="p">)],</span>
         <span class="s2">"Cash"</span><span class="p">:</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">var_cash</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">cvar_cash</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
     <span class="p">})</span>
 
-    <span class="k">return</span> <span class="n">display</span><span class="p">(</span><span class="n">var_df</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">var_df</span>
 </pre></div>
 </div>
 </div>
@@ -7637,9 +7636,9 @@ a.anchor-link {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div class="jp-OutputArea-child jp-OutputArea-executeResult">
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[4]:</div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -7667,13 +7666,13 @@ a.anchor-link {
 <tr>
 <th>0</th>
 <td>VaR</td>
-<td>-1.85</td>
+<td>-1.8482</td>
 <td>-5041647.69</td>
 </tr>
 <tr>
 <th>1</th>
 <td>cVaR</td>
-<td>-2.38</td>
+<td>-2.3751</td>
 <td>-6478978.99</td>
 </tr>
 </tbody>
